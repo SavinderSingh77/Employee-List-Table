@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+@layer utilities {
+  .flex-no-wrap {
+    flex-wrap: nowrap;
+  }
+  ,
+  .border-grey-light {
+    border-color: rgb(209 213 219);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.table-main-container {
+  @apply flex items-center justify-center px-2 w-full;
+}
+
+.th {
+  @apply p-3 text-center;
+}
+.thead-tr {
+  @apply bg-stone-600 flex flex-col flex-no-wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0;
+}
+
+.table {
+  @apply w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5;
+}
+
+.tbody-tr {
+  @apply flex  text-center flex-col flex-no-wrap sm:table-row mb-2 sm:mb-0;
+}
+
+.td {
+  @apply border-grey-light border hover:bg-gray-100 p-3 bg-white;
+}
+
+.tbody {
+  @apply flex-1 sm:flex-none;
+}
+
+.search-container {
+  @apply relative  md:w-1/3 basis-full min-w-[250px];
+}
+.search-input {
+  @apply w-full pl-10 pr-4 py-2 rounded-lg shadow focus:outline-none text-gray-600 font-medium;
+}
+.cross-btn {
+  @apply absolute top-[12px] right-[15px] cursor-pointer;
+}
+
+.drop-down-container {
+  @apply relative inline-block text-left;
+}
+.drop-down-btn {
+  @apply w-[150px] flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50;
+}
+.drop-down-open{
+  @apply absolute right-0 w-40 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 focus:outline-none rounded-md shadow-lg ring-1 ring-black ring-opacity-5
+}
+.drop-down-items{
+  @apply cursor-pointer block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900
+}
+
+.no-match-found{
+  @apply text-red-600 text-[1.5rem] font-bold  h-[90vh] flex justify-center items-start py-20
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+@media (min-width: 640px) {
+  table {
+    display: inline-table !important;
+  }
+
+  thead tr:not(:first-child) {
+    display: none;
+  }
+}
+
+td:not(:last-child) {
+  border-bottom: 0;
+}
+
+th:not(:last-child) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
