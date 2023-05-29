@@ -5,21 +5,21 @@ const COLUMNS = [
     Header: "Emp ID",
     accessor: "emp_id",
     FilterOptions: FilterOptions,
-    disableFilters : true
+    disableFilters: true,
   },
 
   {
     Header: "Full Name",
     accessor: "name",
     FilterOptions: FilterOptions,
-    disableFilters : true
+    disableFilters: true,
   },
 
   {
     Header: "D.O.B",
     accessor: "dob",
     FilterOptions: FilterOptions,
-    disableFilters : true
+    disableFilters: true,
   },
 
   {
