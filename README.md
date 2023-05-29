@@ -18,7 +18,7 @@ This is a responsive employee list table built with React, React Table, Tailwind
 
 
 ## Live Link
-[React](https://employee-table-by-savinder.netlify.app/)
+[click here to open](https://employee-table-by-savinder.netlify.app/)
 
 
 ## Getting Started
